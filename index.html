@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style_css.css" />
+    <title>Formulário de codificação</title>
+  </head>
+
+  <body>
+    <main class="corpo">
+      <form>
+        <h1>CODIFICADOR</h1>
+
+        <fieldset class="escreva">
+          <label for="text">Escreva um texto</label>
+          <input type="text" id="text" />
+        </fieldset>
+
+        <fieldset class="caixaCripto">
+          <select name="select" id="tipo_cripto">
+            <option value="base64">Base-64</option>
+            <option value="cifra_de_cesar">Cifra de César</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <div class="divAjuste">
+            <input type="radio" name="rad" class="radio" />
+            <label for="radio">Codificar</label>
+          </div>
+          <div class="divAjuste">
+            <input type="radio" name="rad" class="radio" />
+            <label for="radio">Decodificar</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="caixaChave">
+          <!--troca no js -->
+
+          <label for="chave">Chave de criptografia</label>
+          <input type="number" id="chave" max="26" value="1"/>
+        </fieldset>
+
+        <fieldset class="divResultado">
+          <label for="resultado">Resultado</label>
+          <input type="text" class="resultado" readonly />
+        </fieldset>
+        <button class="button">CODIFICAR</button>
+      </form>
+    </main>
+    <footer class="rodape">&copy Todos os direitos reservados.</footer>
+
+    <script src="codificador.js"></script>
+  </body>
+</html>
